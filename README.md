@@ -1,2 +1,2 @@
 # yolov8-fraud-detection
-fraud detection by yolov8
+fraud detection project by yolov8 with b:bot by GreenBig
