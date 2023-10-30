@@ -1,0 +1,7 @@
+names:
+- btl
+- hand
+nc: 2
+test: ./dataset_11/test
+train: ./dataset_11/train
+val: ./dataset_11/valid

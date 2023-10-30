@@ -1,14 +1,14 @@
 import cv2
 import os
 
-data_dir = '../demos_triche/00007_btl/run3'
-imgs_dir = '../demos_triche/btl_19_img/'
-
-data_dir = './demo/run7'
-imgs_dir = './demo/btl_5_img/'
+current_dir = os.getcwd()
+data_dir = os.path.join(current_dir, "video")
+imgs_dir = os.path.join(current_dir, "img")
+# image_dir = os.path.join(current_dir, "data")
+# os.makedirs(image_dir, exist_ok=True)
 
 for filename in os.listdir(data_dir):
-    if filename.endswith("20230911184435785_btl_5.mp4"):
+    if filename.endswith(".mp4"):
         video_path = os.path.join(data_dir, filename)
 
         cap = cv2.VideoCapture(video_path)
@@ -27,4 +27,4 @@ for filename in os.listdir(data_dir):
             frame_count += 1
         
         cap.release()
-        print(f"save {frame_count} images to {filename}")
+        print(f"已保存 {frame_count} 帧图像从视频 {filename}")
