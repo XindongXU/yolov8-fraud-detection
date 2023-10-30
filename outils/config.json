@@ -1,0 +1,14 @@
+{
+  "opc_url": "opc.tcp://192.168.80.10:4840",
+  "opc_username": "Vertu00s",
+  "opc_password": "bDEGw48v5Ky2",
+  "screen_orientation": "right",
+  "tolerance": 20,
+  "nbDay": 3,
+  "offsetShutdown":2,
+  "timeNoContact":30,
+  "entrance": "rtsp://192.168.137.200:8554/entrance",
+  "crusher": "rtsp://192.168.137.200:8554/crusher",
+  "SecondTicketPrice": 0.5,
+  "SecondTicketBottleNumber": 20
+}

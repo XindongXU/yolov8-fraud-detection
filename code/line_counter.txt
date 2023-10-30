@@ -1,0 +1,9 @@
+scp -r /home/bbot/Documents/ia_ob2/test_xxl pi@192.168.80.32:/home/pi/Documents/
+
+
+scp /home/bbot/Documents/line_counter.py jetson@192.168.2.100:/home/jetson/Documents/test_jetson
+
+cp /home/jetson/Documents/test_jetson/line_counter.py /home/jetson/.local/lib/python3.8/site-packages/supervision/detection/line_counter.py
+
+
+ultralytics/ultralytics/yolo/utils/ops.py

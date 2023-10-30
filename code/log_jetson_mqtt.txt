@@ -1,0 +1,61 @@
+2023-10-12 15:55:51,536 - INFO - Connected to MQTT Broker :
+2023-10-12 15:55:51,536 - INFO - 192.168.2.89
+2023-10-12 15:55:51,538 - INFO - yolov8 info - ./weights/bestv8img128all.engine
+2023-10-12 15:55:51,539 - INFO - video input - rtsp://localhost:8554/entrance
+2023-10-12 15:55:51,539 - INFO - device info - cuda:0
+2023-10-12 15:55:51,540 - INFO - camera stat - False
+2023-10-12 15:55:51,540 - INFO - demos saved - ./demo/run7
+2023-10-12 15:55:51,646 - INFO - stream  fps - 30
+
+
+2023-10-12 15:56:26,671 - INFO - Received `Barcode Reçu 10/12/2023 15:56:26.260` from `bbot/ia` topic at `2023-10-12 15:56:26.671113`
+2023-10-12 15:56:28,131 - INFO - Send `btl vue-2023-10-12 15:56:28.130617` to topic `bbot/ihm`
+2023-10-12 15:56:29,697 - INFO - count numbers in  1
+2023-10-12 15:56:30,213 - INFO - video is saved as ./demo/run7/20231012155628130_btl_1
+
+
+2023-10-12 15:59:14,260 - INFO - Send `btl vue-2023-10-12 15:59:14.259530` to topic `bbot/ihm`
+2023-10-12 15:59:14,305 - INFO - Received `Barcode Reçu 10/12/2023 15:59:14.232` from `bbot/ia` topic at `2023-10-12 15:59:14.304915`
+2023-10-12 15:59:15,878 - INFO - count numbers in  2
+2023-10-12 15:59:16,504 - INFO - video is saved as ./demo/run7/20231012155914259_btl_3
+
+
+2023-10-12 15:59:51,804 - INFO - Received `Barcode Reçu 10/12/2023 15:59:51.740` from `bbot/ia` topic at `2023-10-12 15:59:51.804293`
+2023-10-12 15:59:52,124 - INFO - Send `btl vue-2023-10-12 15:59:52.124299` to topic `bbot/ihm`
+2023-10-12 15:59:52,913 - INFO - count numbers in  3
+2023-10-12 15:59:53,453 - INFO - video is saved as ./demo/run7/20231012155952124_btl_4
+
+
+2023-10-12 16:00:56,919 - INFO - Received `Barcode Reçu 10/12/2023 16:00:56.883` from `bbot/ia` topic at `2023-10-12 16:00:56.919060`
+2023-10-12 16:00:57,405 - INFO - Send `btl vue-2023-10-12 16:00:57.404762` to topic `bbot/ihm`
+2023-10-12 16:00:58,466 - INFO - count numbers in  4
+2023-10-12 16:00:59,043 - INFO - Received `Barcode Reçu 10/12/2023 16:00:58.981` from `bbot/ia` topic at `2023-10-12 16:00:59.043458`
+2023-10-12 16:00:59,146 - INFO - video is saved as ./demo/run7/20231012160057404_btl_5
+
+
+2023-10-12 16:00:59,687 - INFO - Send `btl vue-2023-10-12 16:00:59.686987` to topic `bbot/ihm`
+2023-10-12 16:01:03,808 - INFO - Received `Barcode Reçu 10/12/2023 16:01:03.742` from `bbot/ia` topic at `2023-10-12 16:01:03.808595`
+2023-10-12 16:01:06,385 - INFO - video is saved as ./demo/run7/20231012160059686_btl_7
+
+
+2023-10-12 16:01:06,909 - INFO - Send `btl vue-2023-10-12 16:01:06.909415` to topic `bbot/ihm`
+2023-10-12 16:01:09,193 - INFO - Received `Barcode Reçu 10/12/2023 16:01:09.132` from `bbot/ia` topic at `2023-10-12 16:01:09.193678`
+2023-10-12 16:01:14,847 - INFO - count numbers in  5
+2023-10-12 16:01:15,449 - INFO - video is saved as ./demo/run7/20231012160106909_btl_9
+
+
+2023-10-12 16:01:15,860 - INFO - Send `btl vue-2023-10-12 16:01:15.859549` to topic `bbot/ihm`
+2023-10-12 16:01:16,518 - INFO - Received `Barcode Reçu 10/12/2023 16:01:16.419` from `bbot/ia` topic at `2023-10-12 16:01:16.518055`
+2023-10-12 16:01:21,407 - INFO - count numbers in  6
+2023-10-12 16:01:22,025 - INFO - video is saved as ./demo/run7/20231012160115859_btl_10
+
+
+2023-10-12 16:01:23,180 - INFO - Received `Barcode Reçu 10/12/2023 16:01:23.129` from `bbot/ia` topic at `2023-10-12 16:01:23.180593`
+2023-10-12 16:01:24,838 - INFO - Send `btl vue-2023-10-12 16:01:24.837657` to topic `bbot/ihm`
+2023-10-12 16:01:27,716 - INFO - count numbers in  7
+2023-10-12 16:01:28,240 - INFO - video is saved as ./demo/run7/20231012160124837_btl_12
+
+
+2023-10-12 16:01:31,069 - INFO - Send `btl vue-2023-10-12 16:01:31.069234` to topic `bbot/ihm`
+2023-10-12 16:01:32,445 - INFO - count numbers in  8
+2023-10-12 16:01:32,917 - INFO - video is saved as ./demo/run7/20231012160131692_btl_13

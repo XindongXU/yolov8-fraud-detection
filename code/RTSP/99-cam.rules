@@ -1,0 +1,2 @@
+SUBSYSTEM=="video4linux", ATTRS{idVendor}=="05a3", ATTRS{idProduct}=="9230", ATTR{index}=="0", MODE="0664", GROUP="video", SYMLINK+="cams/camEntrance"
+SUBSYSTEM=="video4linux", ATTRS{idVendor}=="0458", ATTRS{idProduct}=="708c", ATTR{index}=="0", MODE="0664", GROUP="video", SYMLINK+="cams/camCrusher"

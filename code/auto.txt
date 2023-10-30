@@ -1,0 +1,88 @@
+jetson@nano:~$ crontab -e
+
+@reboot (cd /home/jetson/Documents/test_jetson && /usr/bin/python3 ./detect_triche.py) >> /home/jetson/Documents/test_jetson/cronjoblog_triche.log 2>&1
+
+---------------------------------------------------
+sudo vi /etc/systemd/system/detect-triche.service
+
+[Unit]
+Description=btl triche detection
+ConditionPathExists=/etc/detect_triche.local
+# Wants=network.target jtop.service
+# After=jtop.service
+
+[Service]
+User=jetson
+Group=jetson
+Type=forking
+ExecStart=/etc/detect_triche.local start
+TimeoutSec=0
+RemainAfterExit=yes
+# Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
+sudo vi /etc/detect_triche.local
+
+#!/bin/bash -e
+cd /home/jetson/Documents/test_jetson
+python3 detect_triche.py >> ./demo_triche/detect-triche.log 2>&1 || {
+  echo "Python script failed, waiting for 60 seconds before rebooting the system."
+  sleep 60
+  sudo reboot
+}
+sudo reboot
+exit 0
+
+sudo chmod +x /etc/detect_triche.local
+sudo systemctl daemon-reload
+sudo systemctl enable detect-triche.service
+sudo systemctl start detect-triche.service
+sudo systemctl status detect-triche.service
+
+---------------------------------------------------
+sudo vi /etc/systemd/system/detect.service
+
+[Unit]
+Description=btl detection
+ConditionPathExists=/etc/detect.local
+# Wants=network.target jtop.service
+# After=jtop.service
+
+[Service]
+User=jetson
+Group=jetson
+Type=forking
+ExecStart=/etc/detect.local start
+# ExecStartPost=/bin/sh -c 'journalctl -f -u detect.service --no-pager >> /home/jetson/Documents/test_jetson/demo/logfile.log &'
+# StandardOutput=append:/home/jetson/Documents/test_jetson/demo/logfile.log
+#StandardError=append:/home/jetson/Documents/test_jetson/demo/logfile.log
+TimeoutSec=0
+RemainAfterExit=yes
+# Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
+------------------------
+sudo vi /etc/detect.local
+
+#!/bin/bash -e
+sudo journalctl -f -u detect.service --no-pager | sudo tee -a /home/jetson/Documents/test_jetson/demo/logfile.log >/dev/null &
+
+cd /home/jetson/Documents/test_jetson
+python3 detect_btl.py || {
+  echo "Python script failed, waiting for 60 seconds before rebooting the system."
+  sleep 60
+  sudo reboot
+}
+sudo reboot
+exit 0
+
+sudo chmod +x /etc/detect.local
+sudo systemctl daemon-reload
+sudo systemctl enable detect.service
+sudo systemctl restart detect.service
+^C
+sudo systemctl status detect.service
