@@ -70,13 +70,27 @@ def main(model_path, video_path, device, camera_status = True):
     # ---------------- count number ---------------- #
 
 if __name__ == '__main__':
-    # Inférence du modèle sur jetson
-    model_path = './weights/bestv8img128all.engine'
-    video_path = 'rtsp://localhost:8554/entrance'
-    device = torch.device(0)
-    
-    # camera_status doit être toujours True
-    # car on a fixé la=e snes de caméra sur bbot34
-    camera_status = True
 
+    # Si CUDA est disponible, on est sur jetson
+    if torch.cuda.is_available():
+        # Sur jetson le modèle est accéléré par TensorRT engine
+        model_path = './weights/bestv8img128all.engine'
+        device = torch.device(0)
+
+        video_path = 'rtsp://localhost:8554/entrance'
+        # video_path = './video/faux.mp4'
+        # video_path = './video/vrai.mp4'
+        # camera_status doit être toujours True
+        # car on a fixé le sens de caméra sur bbot34
+        camera_status = True
+    
+    # Inférence du modèle sur l'ordi local
+    else:
+        model_path = './weights/bestv8img128all.pt'
+        device = 'cpu'
+        # Utiliser le CPU si CUDA n'est pas disponible
+
+        video_path = './video/202309151354_bbot00034_btl_dcp.mp4'
+        camera_status = False
+    
     main(model_path, video_path, device, camera_status)
